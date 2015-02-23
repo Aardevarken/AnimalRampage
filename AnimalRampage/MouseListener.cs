@@ -7,6 +7,6 @@ namespace AnimalRampage
 {
     interface MouseListener
     {
-        public void onClick();
+        void onClick();
     }
 }

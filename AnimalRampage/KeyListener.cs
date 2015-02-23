@@ -7,6 +7,6 @@ namespace AnimalRampage
 {
     interface KeyListener
     {
-        public void onKeyPressed();
+        void onKeyPressed();
     }
 }

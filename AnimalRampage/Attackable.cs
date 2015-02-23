@@ -7,6 +7,6 @@ namespace AnimalRampage
 {
     interface Attackable
     {
-        public void takeDamage();
+        void takeDamage();
     }
 }

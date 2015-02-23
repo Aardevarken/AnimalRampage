@@ -7,6 +7,6 @@ namespace AnimalRampage
 {
     interface Drawable
     {
-        public void draw();
+        void draw();
     }
 }
