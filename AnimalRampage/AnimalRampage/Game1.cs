@@ -1,7 +1,6 @@
-using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Cocos2D;
 
 namespace AnimalRampage
 {
@@ -10,71 +9,76 @@ namespace AnimalRampage
     /// </summary>
     public class Game1 : Game
     {
-        private readonly GraphicsDeviceManager graphics;
+        GraphicsDeviceManager graphics;
+        SpriteBatch spriteBatch;
 
         public Game1()
+            : base()
         {
             graphics = new GraphicsDeviceManager(this);
-            //#if MACOS
-            //            Content.RootDirectory = "AngryNinjas/Content";
-            //#else
             Content.RootDirectory = "Content";
-            //#endif
-            //
-            //#if XBOX || OUYA
-            //            graphics.IsFullScreen = true;
-            //#else
-            graphics.IsFullScreen = false;
-            //#endif
-
-            // Frame rate is 30 fps by default for Windows Phone.
-            TargetElapsedTime = TimeSpan.FromTicks(333333 / 2);
-
-            // Extend battery life under lock.
-            //InactiveSleepTime = TimeSpan.FromSeconds(1);
-
-            CCApplication application = new AppDelegate(this, graphics);
-            Components.Add(application);
-            //#if XBOX || OUYA
-            //            CCDirector.SharedDirector.GamePadEnabled = true;
-            //            application.GamePadButtonUpdate += new CCGamePadButtonDelegate(application_GamePadButtonUpdate);
-            //#endif
         }
 
-        //#if XBOX || OUYA
-        //        private void application_GamePadButtonUpdate(CCGamePadButtonStatus backButton, CCGamePadButtonStatus startButton, CCGamePadButtonStatus systemButton, CCGamePadButtonStatus aButton, CCGamePadButtonStatus bButton, CCGamePadButtonStatus xButton, CCGamePadButtonStatus yButton, CCGamePadButtonStatus leftShoulder, CCGamePadButtonStatus rightShoulder, PlayerIndex player)
-        //        {
-        //            if (backButton == CCGamePadButtonStatus.Pressed)
-        //            {
-        //                ProcessBackClick();
-        //            }
-        //        }
-        //#endif
-
-        private void ProcessBackClick()
+        /// <summary>
+        /// Allows the game to perform any initialization it needs to before starting to run.
+        /// This is where it can query for any required services and load any non-graphic
+        /// related content.  Calling base.Initialize will enumerate through any components
+        /// and initialize them as well.
+        /// </summary>
+        protected override void Initialize()
         {
-            if (CCDirector.SharedDirector.CanPopScene)
-            {
-                CCDirector.SharedDirector.PopScene();
-            }
-            else
-            {
-                Exit();
-            }
+            // TODO: Add your initialization logic here
+
+            base.Initialize();
         }
 
+        /// <summary>
+        /// LoadContent will be called once per game and is the place to load
+        /// all of your content.
+        /// </summary>
+        protected override void LoadContent()
+        {
+            // Create a new SpriteBatch, which can be used to draw textures.
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            // TODO: use this.Content to load your game content here
+        }
+
+        /// <summary>
+        /// UnloadContent will be called once per game and is the place to unload
+        /// all content.
+        /// </summary>
+        protected override void UnloadContent()
+        {
+            // TODO: Unload any non ContentManager content here
+        }
+
+        /// <summary>
+        /// Allows the game to run logic such as updating the world,
+        /// checking for collisions, gathering input, and playing audio.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-            {
-                ProcessBackClick();
-            }
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
 
             // TODO: Add your update logic here
 
-
             base.Update(gameTime);
+        }
+
+        /// <summary>
+        /// This is called when the game should draw itself.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            // TODO: Add your drawing code here
+
+            base.Draw(gameTime);
         }
     }
 }
