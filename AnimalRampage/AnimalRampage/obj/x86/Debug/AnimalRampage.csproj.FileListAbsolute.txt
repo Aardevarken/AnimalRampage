@@ -1,0 +1,28 @@
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\Content\fonts\MarkerFelt-22.xnb
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\AnimalRampage.exe
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\AnimalRampage.pdb
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\box2d.dll
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\cocos2d-xna.dll
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\ICSharpCode.SharpZipLib.dll
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\Lidgren.Network.dll
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\MonoGame.Framework.dll
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\OpenTK.dll
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\Tao.Sdl.dll
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\zlib.net.dll
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\obj\x86\Debug\AnimalRampage.csprojResolveAssemblyReference.cache
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\obj\x86\Debug\AnimalRampage.exe
+c:\users\mgarske\documents\visual studio 2013\Projects\AnimalRampage\AnimalRampage\obj\x86\Debug\AnimalRampage.pdb
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\Content\fonts\MarkerFelt-22.xnb
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\AnimalRampage.exe
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\AnimalRampage.pdb
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\box2d.dll
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\cocos2d-xna.dll
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\Lidgren.Network.dll
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\MonoGame.Framework.dll
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\Tao.Sdl.dll
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\bin\WindowsGL\Debug\zlib.net.dll
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\obj\x86\Debug\AnimalRampage.csprojResolveAssemblyReference.cache
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\obj\x86\Debug\AnimalRampage.exe
+C:\Users\MGarske\Documents\AnimalRampage\AnimalRampage\AnimalRampage\obj\x86\Debug\AnimalRampage.pdb
