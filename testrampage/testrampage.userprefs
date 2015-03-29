@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="testrampage/testrampage.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="testrampage/Game1.cs">
+    <Files>
+      <File FileName="testrampage/Game1.cs" Line="1" Column="1" />
+      <File FileName="testrampage/Tao.Sdl.dll.config" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
