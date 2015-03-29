@@ -1,9 +1,8 @@
+﻿#----------------------------- Global Properties ----------------------------#
 
-#----------------------------- Global Properties ----------------------------#
-
-/outputDir:bin/Linux
-/intermediateDir:obj/Linux
-/platform:Linux
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:Windows
 /config:
 /profile:Reach
 /compress:False
@@ -12,4 +11,3 @@
 
 
 #---------------------------------- Content ---------------------------------#
-

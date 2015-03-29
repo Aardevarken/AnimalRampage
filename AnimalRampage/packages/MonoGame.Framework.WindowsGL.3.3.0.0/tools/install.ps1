@@ -1,6 +1,6 @@
 param($installPath, $toolsPath, $package, $project)
-$file1 = $project.ProjectItems.Item("OpenTK.dll.config")
-$file2 = $project.ProjectItems.Item("Tao.Sdl.dll.config")
+$file1 = $project.ProjectItems.Item("SDL_mixer.dll")
+$file2 = $project.ProjectItems.Item("SDL.dll")
 
 // set 'Copy To Output Directory' to 'Copy if newer'
 $copyToOutput1 = $file1.Properties.Item("CopyToOutputDirectory")
