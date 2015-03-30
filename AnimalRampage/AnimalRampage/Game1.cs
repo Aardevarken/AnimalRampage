@@ -34,6 +34,13 @@ namespace AnimalRampage
 		protected override void Initialize ()
 		{
 			// TODO: Add your initialization logic here
+			ScreenManager.Instance.Initialize ();
+
+			ScreenManager.Instance.dimensions = new Vector2 (800, 600);
+			graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.dimensions.X;
+			graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.dimensions.Y;
+			graphics.ApplyChanges ();
+
 			base.Initialize ();
 				
 		}
@@ -48,6 +55,12 @@ namespace AnimalRampage
 			spriteBatch = new SpriteBatch (GraphicsDevice);
 
 			//TODO: use this.Content to load your game content here 
+			ScreenManager.Instance.LoadContent (Content);
+		}
+
+		protected override void UnloadContent()
+		{
+			// TODO: unload any non ContentManager content here
 		}
 
 		/// <summary>
@@ -65,7 +78,8 @@ namespace AnimalRampage
 				Exit ();
 			}
 			#endif
-			// TODO: Add your update logic here			
+			// TODO: Add your update logic here		
+			ScreenManager.Instance.Update (gameTime);	
 			base.Update (gameTime);
 		}
 
@@ -78,8 +92,11 @@ namespace AnimalRampage
 			graphics.GraphicsDevice.Clear (Color.CornflowerBlue);
 		
 			//TODO: Add your drawing code here
-            
+			spriteBatch.Begin ();
+			ScreenManager.Instance.Draw (spriteBatch);
+			spriteBatch.End ();
 			base.Draw (gameTime);
+
 		}
 	}
 }
