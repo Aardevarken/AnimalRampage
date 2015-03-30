@@ -8,12 +8,11 @@ namespace AnimalRampage
 {
 	public class TitleScreen: GameScreen
 	{
-		KeyboardState keyState;
 		SpriteFont font;
 
-		public override void LoadContent(ContentManager Content)
+		public override void LoadContent(ContentManager Content, InputManager inputManager)
 		{
-			base.LoadContent (Content);
+			base.LoadContent (Content, inputManager);
 			if (font == null)
 				font = content.Load<SpriteFont> ("Font1");
 		}
@@ -25,9 +24,9 @@ namespace AnimalRampage
 
 		public override void Update(GameTime gameTime)
 		{
-			keyState = Keyboard.GetState ();
-			if (keyState.IsKeyDown (Keys.Enter))
-				ScreenManager.Instance.AddScreen (new SplashScreen ());
+			base.Update (gameTime);
+			if (inputManager.KeyPressed(Keys.Z))
+				ScreenManager.Instance.AddScreen (new PlayScreen (), inputManager);
 		}
 
 		public override void Draw(SpriteBatch spriteBatch)

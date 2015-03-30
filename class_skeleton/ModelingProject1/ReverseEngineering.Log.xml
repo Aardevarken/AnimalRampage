@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-03-29T21:39:17" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '1663d011-0818-4d6b-9a36-be81fc64fa13' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage' -  (Package)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::AnimalStats' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::AnimalStats::AnimalStats' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::AnimalStats::karmaRequired' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Attackable' -  (Interface)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Attackable::takeDamage' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::animal_pack' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::Backpack' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::capacity' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::dropKeys' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::getAnimal' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::getAnimal::id' -  (Parameter)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::getHoodie' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::getHoodie::id' -  (Parameter)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::hoodie_pack' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::keychain' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::putAnimal' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::putAnimal::animal_in' -  (Parameter)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::putHoodie' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Backpack::putHoodie::hoodie_in' -  (Parameter)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackAnimal' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackAnimal::BackpackAnimal' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackAnimal::stats' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackAnimal::usePrimary' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackAnimal::useSecondary' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackAnimalStats' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackAnimalStats::BackpackAnimalStats' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackAnimalStats::loyalty' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackHoodie' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackHoodie::BackpackHoodie' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackObject' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackObject::AnimalRampage‎.Drawable‎.draw' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackObject::BackpackObject' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackpackObject::size' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackPackSnake' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackPackSnake::BackPackSnake' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackPackTurtle' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::BackPackTurtle::BackPackTurtle' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Boss' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Boss::Boss' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Boss::dropLoot' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Boss::loot' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Boss::secondaryAttack' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::AnimalRampage‎.Attackable‎.takeDamage' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::attack' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::backpack' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::Character' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::die' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::hoodie' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::move' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::primary' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::secondary' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Character::stats' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::CharacterStats' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::CharacterStats::CharacterStats' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::AnimalRampage‎.KeyListener‎.onKeyPressed' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::AnimalRampage‎.MouseListener‎.onClick' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::character' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::Controller' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::createBackpackMenu' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::createMainMenu' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::createPauseMenu' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::recieveEvent' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Controller::world' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Corridor' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Corridor::Corridor' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Corridor::enemies' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Drawable' -  (Interface)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Drawable::draw' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Enemy' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Enemy::AnimalRampage‎.Attackable‎.takeDamage' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Enemy::attack' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Enemy::die' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Enemy::Enemy' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Enemy::move' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Enemy::stats' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::EnemyStats' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::EnemyStats::anger' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::EnemyStats::EnemyStats' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::GameObject' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::GameObject::AnimalRampage‎.Drawable‎.draw' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::GameObject::GameObject' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::GameObject::x_pos' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::GameObject::y_pos' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Hoodie' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Hoodie::Hoodie' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Key' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Key::Key' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::KeyListener' -  (Interface)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::KeyListener::onKeyPressed' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Level' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Level::corridors' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Level::Level' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Level::rooms' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::MouseListener' -  (Interface)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::MouseListener::onClick' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::NPCStats' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::NPCStats::aggro' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::NPCStats::NPCStats' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Room' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Room::animals' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Room::boss' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Room::enemies' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Room::Room' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::attack' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::defense' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::electrical_damage' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::electrical_resistance' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::fire_damage' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::fire_resistance' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::health' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::kockback' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::kockback_resistance' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::paralysis' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::paralysis_resistance' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::poison_damage' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::poison_resistance' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::speed' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::Stats' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::water_damage' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::Stats::water_resistance' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildAnimal' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildAnimal::die' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildAnimal::getBackpackVersion' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildAnimal::stats' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildAnimal::WildAnimal' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildSnake' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildSnake::WildSnake' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildTurtle' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::WildTurtle::WildTurtle' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World' -  (Class)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::animals' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::character' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::create' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::enemies' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::levels' -  (Property)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::save' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::world' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::World' -  (Operation)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::AnimalRampage::World::world::file_name' -  (Parameter)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System' -  (Package)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;BackpackAnimal‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;BackpackHoodie‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;Corridor‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;Enemy‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;GameObject‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;Key‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;Level‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;Room‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::List&lt;WildAnimal‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Single' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::BackpackObject to ModelingProject1::AnimalRampage::Drawable (InterfaceRealization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::BackPackSnake to ModelingProject1::AnimalRampage::BackpackAnimal (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::BackPackTurtle to ModelingProject1::AnimalRampage::BackpackAnimal (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::Boss to ModelingProject1::AnimalRampage::Enemy (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::Character to ModelingProject1::AnimalRampage::Attackable (InterfaceRealization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::Character to ModelingProject1::AnimalRampage::GameObject (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::Controller to ModelingProject1::AnimalRampage::KeyListener (InterfaceRealization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::Controller to ModelingProject1::AnimalRampage::MouseListener (InterfaceRealization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::Enemy to ModelingProject1::AnimalRampage::Attackable (InterfaceRealization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::Enemy to ModelingProject1::AnimalRampage::GameObject (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::EnemyStats to ModelingProject1::AnimalRampage::NPCStats (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::GameObject to ModelingProject1::AnimalRampage::Drawable (InterfaceRealization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::NPCStats to ModelingProject1::AnimalRampage::Stats (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::WildAnimal to ModelingProject1::AnimalRampage::GameObject (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::WildSnake to ModelingProject1::AnimalRampage::WildAnimal (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::WildTurtle to ModelingProject1::AnimalRampage::WildAnimal (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::AnimalRampage::BackpackAnimal to ModelingProject1::AnimalRampage::BackpackObject (Generalization)" />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="High" Text="(30) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="High" Text="(11) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-03-29T21:39:22" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

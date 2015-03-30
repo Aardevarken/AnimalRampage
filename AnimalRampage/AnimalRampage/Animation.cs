@@ -20,6 +20,12 @@ namespace AnimalRampage
 		protected ContentManager content;
 		public bool isActive { get; set; }
 
+		public Vector2 Position 
+		{
+			get { return position; }
+			set { position = value; }
+		}
+
 		public virtual float Alpha 
 		{
 			get { return alpha; }

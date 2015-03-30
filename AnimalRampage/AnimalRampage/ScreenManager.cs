@@ -18,6 +18,7 @@ namespace AnimalRampage
 		bool transition;
 		FadeAnimation fade;
 		Texture2D fadeTexture;
+		InputManager inputManager;
 
 	
 		// this is a singleton
@@ -29,13 +30,14 @@ namespace AnimalRampage
 			}
 		}
 
-		public void AddScreen(GameScreen screen)
+		public void AddScreen(GameScreen screen, InputManager inputmanager)
 		{
 			newScreen = screen;
 			transition = true;
 			fade.isActive = true;
 			fade.Alpha = 0.0f;
 			fade.activateValue = 1.0f;
+			this.inputManager = inputManager;
 		}
 
 		public void Initialize() 
@@ -46,7 +48,8 @@ namespace AnimalRampage
 		public void LoadContent(ContentManager Content) 
 		{
 			content = new ContentManager (Content.ServiceProvider, "Content");
-			currentScreen.LoadContent (Content);
+			inputManager = new InputManager ();
+			currentScreen.LoadContent (Content, inputManager);
 
 			fadeTexture = content.Load<Texture2D> ("fade");
 			fade.LoadContent (content, fadeTexture, "", Vector2.Zero);
@@ -75,7 +78,7 @@ namespace AnimalRampage
 				screenStack.Push (newScreen);
 				currentScreen.UnloadContent ();
 				currentScreen = newScreen;
-				currentScreen.LoadContent (content);
+				currentScreen.LoadContent (content, inputManager);
 			} else if (fade.Alpha == 0.0f) {
 				transition = false;
 				fade.isActive = false;
