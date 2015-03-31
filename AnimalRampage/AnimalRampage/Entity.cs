@@ -12,7 +12,7 @@ namespace AnimalRampage
 		protected int health;
 		protected SpriteSheetAnimation moveAnimation;
 		protected float moveSpeed;
-		protected Vector2 postion;
+		protected Vector2 position;
 		protected Texture2D image;
 
 		protected ContentManager content;

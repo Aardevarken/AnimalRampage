@@ -42,7 +42,9 @@ namespace AnimalRampage
 
 		public void Initialize() 
 		{
-			currentScreen = new SplashScreen ();
+//			currentScreen = new SplashScreen ();
+			// dev mode engage
+			currentScreen = new PlayScreen ();
 			fade = new FadeAnimation ();
 		}
 		public void LoadContent(ContentManager Content) 
@@ -57,7 +59,7 @@ namespace AnimalRampage
 		}
 		public void Update (GameTime gameTime) 
 		{ 
-			if (!transition)
+			 if (!transition)
 				currentScreen.Update (gameTime);
 			else
 				Transition (gameTime);

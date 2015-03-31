@@ -8,10 +8,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace AnimalRampage
 {
-	public class SpriteSheetAnimation : Animation
+	public abstract class SpriteSheetAnimation : Animation
 	{
-		int frameCounter;
-		int switchFrame;
+		private int frameCounter;
+		protected int start;
+		protected int length;
+		private int switchFrame;
 
 		public Vector2 frames { get; set; }
 		public Vector2 currentFrame { get; set; }
@@ -25,37 +27,29 @@ namespace AnimalRampage
 			get { return image.Height / (int)frames.Y; }
 		}
 
-		public override void LoadContent (ContentManager Content, Texture2D image, string text, Vector2 position)
+		public void LoadContent (ContentManager Content, Texture2D image, Vector2 sheetSize, Vector2 startFrame, int length)
 		{
-			base.LoadContent (Content, image, text, position);
+			base.LoadContent (Content, image);
 			frameCounter = 0;
 			switchFrame = 100;
-			frames = new Vector2 (4, 4);
-			currentFrame = new Vector2 (0, 0);
+			start = (int) startFrame.X;
+			currentFrame = startFrame;
+			this.length = length;
+			frames = sheetSize;
 			sourceRect = new Rectangle ((int)currentFrame.X * FrameWidth, (int)currentFrame.Y * FrameHeight, FrameWidth, FrameHeight);
 		}
 
-		public override void UnloadContent ()
-		{
-			base.UnloadContent ();
-		}
-
-		public override void Update (GameTime gametime)
+		public void IncrementFrame (GameTime gametime)
 		{
 			if (!isPaused) {
-				if (isActive) {
-					frameCounter += (int)gametime.ElapsedGameTime.TotalMilliseconds;
-					if (frameCounter >= switchFrame) {
-						frameCounter = 0;
-						currentFrame = new Vector2 (currentFrame.X + 1, currentFrame.Y);
-
-						if (currentFrame.X * FrameWidth >= image.Width)
-							currentFrame = new Vector2 (0, currentFrame.Y);
-						;
-					}
-				} else {
+				frameCounter += (int)gametime.ElapsedGameTime.TotalMilliseconds;
+				if (frameCounter >= switchFrame) {
 					frameCounter = 0;
-					currentFrame = new Vector2 (1, currentFrame.Y);
+					currentFrame = new Vector2 (currentFrame.X + 1, currentFrame.Y);
+
+					if (currentFrame.X * FrameWidth >= image.Width) {
+						currentFrame = new Vector2 (start, currentFrame.Y);
+					}
 				}
 			}
 			sourceRect = new Rectangle ((int)currentFrame.X * FrameWidth, (int)currentFrame.Y * FrameHeight, FrameWidth, FrameHeight);
