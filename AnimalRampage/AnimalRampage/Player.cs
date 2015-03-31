@@ -15,7 +15,6 @@ namespace AnimalRampage
 			base.LoadContent (content, inputManager);
 			moveAnimation = new SpriteSheetAnimation ();
 			input = inputManager;
-			Vector2 tempFrames = Vector2.Zero;
 			image = content.Load<Texture2D> ("mc_upperbody_ss");
 			postion = new Vector2 (100, 100);
 			moveAnimation.LoadContent (content, image, "", postion);
@@ -34,16 +33,15 @@ namespace AnimalRampage
 			if (input.KeyDown (Keys.Right, Keys.D)) {
 				moveAnimation.currentFrame = new Vector2 (moveAnimation.currentFrame.X, 0);
 				moveAnimation.Position = new Vector2 (moveAnimation.Position.X + 10, moveAnimation.Position.Y);
-			} 
-			else if (input.KeyDown (Keys.Left, Keys.A)) 
-			{
+				moveAnimation.isPaused = false;
+			} else if (input.KeyDown (Keys.Left, Keys.A)) {
 				moveAnimation.currentFrame = new Vector2 (moveAnimation.currentFrame.X, 1);
 				moveAnimation.Position = new Vector2 (moveAnimation.Position.X - 10, moveAnimation.Position.Y);
+				moveAnimation.isPaused = false;
+			} else {
+				moveAnimation.isPaused = true;
 			}
-			else
-				moveAnimation.isActive = false;
 			moveAnimation.Update (gameTime);
-
 		}
 
 		public override void Draw (SpriteBatch spriteBatch)

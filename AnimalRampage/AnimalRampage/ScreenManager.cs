@@ -37,7 +37,7 @@ namespace AnimalRampage
 			fade.isActive = true;
 			fade.Alpha = 0.0f;
 			fade.activateValue = 1.0f;
-			this.inputManager = inputManager;
+			this.inputManager = inputmanager;
 		}
 
 		public void Initialize() 
