@@ -6,10 +6,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace AnimalRampage
-{
-	public class Animation
-	{
+namespace AnimalRampage {
+	public abstract class Animation {
 		protected Texture2D image;
 		protected string text;
 		protected SpriteFont font;
@@ -21,29 +19,24 @@ namespace AnimalRampage
 		public bool isActive { get; set; }
 		public bool isPaused { get; set; }
 
-		public Vector2 Position 
-		{
+		public Vector2 Position {
 			get { return position; }
 			set { position = value; }
 		}
 
-		public virtual float Alpha 
-		{
+		public virtual float Alpha {
 			get { return alpha; }
 			set { alpha = value; }
 		}
 
-		public float Scale 
-		{
+		public float Scale {
 			set { scale = value; }
 		}
 
-		public virtual void LoadContent(ContentManager Content, Texture2D image, string text, Vector2 position)
-		{
+		public virtual void LoadContent(ContentManager Content, Texture2D image, string text) {
 			content = new ContentManager(Content.ServiceProvider, "Content");
 			this.image = image;
 			this.text = text;
-			this.position = position;
 			if (text != String.Empty) {
 				font = content.Load<SpriteFont> ("Font1");
 				color = new Color (114, 77, 255);
@@ -52,6 +45,7 @@ namespace AnimalRampage
 				sourceRect = new Rectangle (0, 0, image.Width, image.Height);
 			rotation = axis = 0.0f;
 			scale = alpha = 1.0f;
+			isActive = true;
 			isPaused = false;
 		}
 
@@ -62,17 +56,12 @@ namespace AnimalRampage
 			position = Vector2.Zero;
 			sourceRect = Rectangle.Empty;
 			image = null;
-
 		}
 
-		public virtual void Update(GameTime gametime)
-		{
-		}
+		public abstract void Update(GameTime gametime);
 
-		public virtual void Draw(SpriteBatch spriteBatch)
-		{
-			if (image != null) 
-			{
+		public virtual void Draw(SpriteBatch spriteBatch) {
+			if (image != null) {
 				origin = new Vector2 (sourceRect.Width / 2, sourceRect.Height / 2);
 				spriteBatch.Draw (image, position + origin, sourceRect, Color.White * alpha, rotation, origin, scale, SpriteEffects.None, 0.0f);
 			}
@@ -81,6 +70,11 @@ namespace AnimalRampage
 				origin = new Vector2 (font.MeasureString (text).X / 2, font.MeasureString (text).Y / 2);
 				spriteBatch.DrawString (font, text, position + origin, color * alpha, rotation, origin, scale, SpriteEffects.None, 0.0f);
 			}
+		}
+
+		public virtual void Draw(SpriteBatch spriteBatch, Vector2 position) {
+			this.position = position;
+			Draw (spriteBatch);
 		}
 	}
 }

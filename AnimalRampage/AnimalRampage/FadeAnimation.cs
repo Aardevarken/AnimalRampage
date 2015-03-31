@@ -18,6 +18,11 @@ namespace AnimalRampage
 		public float activateValue { get; set; }
 		float defaultAlpha;
 
+		public Vector2 Position {
+			get { return position; }
+			set { position = value; }
+		}
+
 		public override float Alpha {
 			get {
 				return alpha;
@@ -47,6 +52,7 @@ namespace AnimalRampage
 			activateValue = 0.0f;
 			stopUpdating = false;
 			defaultAlpha = alpha;
+			this.position = position;
 		}
 
 		public override void Update (GameTime gametime)
