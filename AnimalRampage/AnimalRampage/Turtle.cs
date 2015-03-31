@@ -7,47 +7,39 @@ using System.Collections.Generic;
 
 namespace AnimalRampage
 {
-	public class Turtle : Weapon
+	public class Turtle : Weapon, FiniteAnimationSubscriber
 	{
-		protected SpriteSheetAnimation throwAnimation;
+		protected FiniteAnimation throwAnimation;
 		protected Texture2D image;
-		private bool thrown;
-		private int throwProgress;
 
 		#region implemented abstract members of Weapon
 		public override void LoadContent (ContentManager content)
 		{
-			throwAnimation = new SpriteSheetAnimation ();
+			throwAnimation = new FiniteAnimation ();
 			image = content.Load<Texture2D> ("secondary_attack");
-			throwAnimation.LoadContent (content, image, "", Vector2.Zero, new Vector2(5, 1));
+			throwAnimation.LoadContent (content, image, new Vector2(5, 1), new Vector2(0, 0), 5);
 			throwAnimation.Scale = 0.5f;
-			thrown = false;
-			throwProgress = 0;
+			throwAnimation.subscribe (this);
 		}
 
 		public override void Throw () {
-			thrown = true;
+			throwAnimation.Start ();
 		}
 			
-		public override void Draw (SpriteBatch spriteBatch, Vector2 position)
-		{
-			if (thrown) {
-				throwAnimation.isPaused = false;
-				throwAnimation.Draw (spriteBatch, position);
-			} else {
-				throwAnimation.isPaused = true;
-			}
+		public override void Draw (SpriteBatch spriteBatch, Vector2 position) {
+			throwAnimation.Draw (spriteBatch, position);
 		}
 			
 		public override void Update (GameTime gameTime)
 		{
-			if (throwProgress == 5) {
-				thrown = false;
-				throwProgress = 0;
-			}
-			throwProgress += 1;
 			throwAnimation.Update (gameTime);
 		}
+		#endregion
+
+		#region FiniteAnimationSubscriber implementation
+
+		public void animationFinished () {}
+
 		#endregion
 	}
 };

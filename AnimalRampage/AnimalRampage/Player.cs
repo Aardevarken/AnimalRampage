@@ -19,11 +19,11 @@ namespace AnimalRampage
 			holding.LoadContent (content);
 			backpack = new List<Weapon> ();
 			base.LoadContent (content, inputManager);
-			moveAnimation = new SpriteSheetAnimation ();
+			moveAnimation = new LoopingAnimation ();
 			input = inputManager;
 			image = content.Load<Texture2D> ("mc_upperbody");
 			position = new Vector2 (100, 100);
-			moveAnimation.LoadContent (content, image, "", Vector2.Zero, new Vector2(8, 3));
+			moveAnimation.LoadContent (content, image, new Vector2(8, 3), new Vector2(0, 0), 8);
 			moveAnimation.Scale = 0.5f;
 		}
 

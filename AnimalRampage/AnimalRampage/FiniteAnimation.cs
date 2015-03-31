@@ -8,14 +8,14 @@ namespace AnimalRampage
 	public class FiniteAnimation : SpriteSheetAnimation
 	{
 		private List<FiniteAnimationSubscriber> subscribers;
+		int lastFrame;
 
-		public FiniteAnimation(ContentManager Content, Texture2D image, Vector2 startFrame, int length) {
-
-		}
-
-		public override void LoadContent(ContentManager Content, Texture2D image, string text, Vector2 startFrame, int length) {
-			base.LoadContent(Content, image, text, startFrame, length);
+		new public void LoadContent(ContentManager Content, Texture2D image, Vector2 sheetSize, Vector2 startFrame, int length) {
+			base.LoadContent(Content, image, sheetSize, startFrame, length);
 			subscribers = new List<FiniteAnimationSubscriber> ();
+			isPaused = true;
+			draw = false;
+			lastFrame = 0;
 		}
 
 		public void subscribe(FiniteAnimationSubscriber subscriber) {
@@ -24,17 +24,19 @@ namespace AnimalRampage
 
 		public void Start () {
 			isPaused = false;
-			currentFrame.X = start;
+			draw = true;
 		}
 
 		public override void Update (GameTime gametime) {
 			IncrementFrame(gametime);
-			if (currentFrame.X >= length) {
+			if (currentFrame.X < lastFrame) {
 				foreach (FiniteAnimationSubscriber subscriber in subscribers) {
 					subscriber.animationFinished ();
 				}
 				isPaused = true;
+				draw = false;
 			}
+			lastFrame = (int) currentFrame.X;
 		}
 	}
 }

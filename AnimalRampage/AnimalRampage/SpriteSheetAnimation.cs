@@ -27,15 +27,15 @@ namespace AnimalRampage
 			get { return image.Height / (int)frames.Y; }
 		}
 
-		public void LoadContent (ContentManager Content, Texture2D image, string text, Vector2 startFrame, int length)
+		public void LoadContent (ContentManager Content, Texture2D image, Vector2 sheetSize, Vector2 startFrame, int length)
 		{
-			base.LoadContent (Content, image, text, position);
+			base.LoadContent (Content, image);
 			frameCounter = 0;
 			switchFrame = 100;
 			start = (int) startFrame.X;
 			currentFrame = startFrame;
 			this.length = length;
-			frames = new Vector2(currentFrame.X+length, currentFrame.Y);
+			frames = sheetSize;
 			sourceRect = new Rectangle ((int)currentFrame.X * FrameWidth, (int)currentFrame.Y * FrameHeight, FrameWidth, FrameHeight);
 		}
 

@@ -18,11 +18,6 @@ namespace AnimalRampage
 		public float activateValue { get; set; }
 		float defaultAlpha;
 
-		public Vector2 Position {
-			get { return position; }
-			set { position = value; }
-		}
-
 		public override float Alpha {
 			get {
 				return alpha;
@@ -42,9 +37,9 @@ namespace AnimalRampage
 			set { defaultTime = value; timer = defaultTime; } 
 		}
 
-		public override void LoadContent(ContentManager Content, Texture2D image, string text, Vector2 position)
+		public void LoadContent(ContentManager Content, Texture2D image, string text, Vector2 position)
 		{
-			base.LoadContent (Content, image, text, position);
+			base.LoadContent (Content, image);
 			increase = false;
 			fadeSpeed = 1.0f;
 			defaultTime = new TimeSpan (0, 0, 1);
@@ -53,6 +48,7 @@ namespace AnimalRampage
 			stopUpdating = false;
 			defaultAlpha = alpha;
 			this.position = position;
+			this.text = text;
 		}
 
 		public override void Update (GameTime gametime)
