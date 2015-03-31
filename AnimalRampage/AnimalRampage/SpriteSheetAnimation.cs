@@ -42,22 +42,21 @@ namespace AnimalRampage
 
 		public override void Update (GameTime gametime)
 		{
-			if (isActive) 
-			{
-				frameCounter += (int)gametime.ElapsedGameTime.TotalMilliseconds;
-				if (frameCounter >= switchFrame) 
-				{
-					frameCounter = 0;
-					currentFrame = new Vector2(currentFrame.X + 1, currentFrame.Y);
+			if (!isPaused) {
+				if (isActive) {
+					frameCounter += (int)gametime.ElapsedGameTime.TotalMilliseconds;
+					if (frameCounter >= switchFrame) {
+						frameCounter = 0;
+						currentFrame = new Vector2 (currentFrame.X + 1, currentFrame.Y);
 
-					if (currentFrame.X * FrameWidth >= image.Width)
-						currentFrame = new Vector2(0, currentFrame.Y);;
+						if (currentFrame.X * FrameWidth >= image.Width)
+							currentFrame = new Vector2 (0, currentFrame.Y);
+						;
+					}
+				} else {
+					frameCounter = 0;
+					currentFrame = new Vector2 (1, currentFrame.Y);
 				}
-			} 
-			else 
-			{
-				frameCounter = 0;
-				currentFrame = new Vector2 (1, currentFrame.Y);
 			}
 			sourceRect = new Rectangle ((int)currentFrame.X * FrameWidth, (int)currentFrame.Y * FrameHeight, FrameWidth, FrameHeight);
 		}

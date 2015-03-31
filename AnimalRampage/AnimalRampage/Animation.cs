@@ -19,6 +19,7 @@ namespace AnimalRampage
 		protected Vector2 origin, position;
 		protected ContentManager content;
 		public bool isActive { get; set; }
+		public bool isPaused { get; set; }
 
 		public Vector2 Position 
 		{
@@ -51,6 +52,7 @@ namespace AnimalRampage
 				sourceRect = new Rectangle (0, 0, image.Width, image.Height);
 			rotation = axis = 0.0f;
 			scale = alpha = 1.0f;
+			isPaused = false;
 		}
 
 		public virtual void UnloadContent()
