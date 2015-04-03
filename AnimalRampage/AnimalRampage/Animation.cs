@@ -76,7 +76,9 @@ namespace AnimalRampage {
 		}
 
 		public virtual void Draw(SpriteBatch spriteBatch, Vector2 position) {
-			this.position = position;
+			if (draw) {
+				this.position = position;
+			}
 			Draw (spriteBatch);
 		}
 	}
