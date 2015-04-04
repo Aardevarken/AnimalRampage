@@ -22,10 +22,12 @@ namespace AnimalRampage
 			moveAnimation = new LoopingAnimation ();
 			input = inputManager;
 			image = content.Load<Texture2D> ("mc_upperbody");
-			position = new Vector2 (100, 100);
+			position = new Vector2 (0, 100);
 			moveAnimation.LoadContent (content, image, new Vector2(8, 3), new Vector2(0, 0), 8);
 			moveAnimation.Scale = 0.5f;
 		}
+
+
 
 		public override void UnloadContent ()
 		{
@@ -35,19 +37,26 @@ namespace AnimalRampage
 
 		public override void Update (GameTime gameTime, InputManager input)
 		{
+			base.Update (gameTime, input);
 			if (input.KeyDown (Keys.Right, Keys.D)) {
-				position.X += 5;
+				velocity.X = horizontalSpeed;
 				moveAnimation.isPaused = false;
 			} else if (input.KeyDown (Keys.Left, Keys.A)) {
-				position.X -= 5;
+				velocity.X = -horizontalSpeed;
 				moveAnimation.isPaused = false;
 			} else {
+				velocity.X = 0;
 				moveAnimation.isPaused = true;
 			}
+			//running
+			if (input.KeyDown (Keys.LeftShift))
+				velocity.X *= 1.5f;
 
 			if (input.KeyDown (Keys.X)) {
 				holding.Throw ();
 			}
+			if (input.KeyDown (Keys.Space))
+				this.Jump ();
 			holding.Update (gameTime);
 			moveAnimation.Update (gameTime);
 		}
