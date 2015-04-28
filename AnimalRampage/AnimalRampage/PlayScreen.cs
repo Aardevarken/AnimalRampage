@@ -11,6 +11,7 @@ namespace AnimalRampage
 	{
 		private Player player;
 		private List<Enemy> enemies;
+		private int turtleGenRefresh = 20;
 
 		public override void LoadContent(ContentManager Content, InputManager inputManager)
 		{
@@ -33,8 +34,9 @@ namespace AnimalRampage
 		{
 			inputManager.Update ();
 			player.Update (gameTime, inputManager);
-			if (enemies.Count < 50) {
+			if (enemies.Count < 50 && turtleGenRefresh < 1) {
 				enemies.Add (EnemyFactory.getInstance ("spin", content, inputManager));
+				turtleGenRefresh = 20;
 			}
 			foreach (Enemy enemy in enemies) {
 				enemy.Update (gameTime, inputManager);
@@ -44,6 +46,7 @@ namespace AnimalRampage
 					break;
 				}
 			}
+			turtleGenRefresh--;
 		}
 
 		public override void Draw(SpriteBatch spriteBatch)
