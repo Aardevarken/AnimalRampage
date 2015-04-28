@@ -19,6 +19,7 @@ namespace AnimalRampage {
 		public bool isActive { get; set; }
 		public bool isPaused { get; set; }
 		public bool draw { get; set; }
+		public bool flippedHorizontally;
 
 		public Vector2 Position {
 			get { return position; }
@@ -49,6 +50,7 @@ namespace AnimalRampage {
 			isPaused = false;
 			draw = true;
 			text = "";
+			flippedHorizontally = false;
 		}
 
 		public virtual void UnloadContent()
@@ -63,14 +65,20 @@ namespace AnimalRampage {
 		public abstract void Update(GameTime gametime);
 
 		public virtual void Draw(SpriteBatch spriteBatch) {
+			SpriteEffects effect;
+			if (flippedHorizontally) {
+				effect = SpriteEffects.FlipHorizontally;
+			} else {
+				effect = SpriteEffects.None;
+			}
 			if (draw) {
 				if (image != null) {
 					origin = new Vector2 (sourceRect.Width / 2, sourceRect.Height / 2);
-					spriteBatch.Draw (image, position + origin, sourceRect, Color.White * alpha, rotation, origin, scale, SpriteEffects.None, 0.0f);
+					spriteBatch.Draw (image, position+origin, sourceRect, Color.White * alpha, rotation, origin, scale, effect, 0.0f);
 				}
 				if (text != String.Empty) {
 					origin = new Vector2 (font.MeasureString (text).X / 2, font.MeasureString (text).Y / 2);
-					spriteBatch.DrawString (font, text, position + origin, color * alpha, rotation, origin, scale, SpriteEffects.None, 0.0f);
+					spriteBatch.DrawString (font, text, position, color * alpha, rotation, origin, scale, effect, 0.0f);
 				}
 			}
 		}

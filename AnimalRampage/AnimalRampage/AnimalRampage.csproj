@@ -65,7 +65,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FiniteAnimationSubscriber.cs" />
     <Compile Include="FiniteAnimation.cs" />
-    <Compile Include="CollisionDetector.cs" />
+    <Compile Include="EnemyTurtle.cs" />
+    <Compile Include="EnemyFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon.png" />
@@ -94,6 +95,30 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\secondary_attack.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\MainCharacter\bear_man_sprite_sheet.xnb">
+      <Link>Content\bear_man_sprite_sheet.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\MainCharacter\floor.xnb">
+      <Link>Content\floor.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\MainCharacter\mc_leg_ss.png">
+      <Link>Content\mc_leg_ss.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\MainCharacter\mc_upperbody_ss.png">
+      <Link>Content\mc_upperbody_ss.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\MainCharacter\stereo_sprite_sheet.xnb">
+      <Link>Content\stereo_sprite_sheet.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\MainCharacter\wolfman_jack_sprite_sheet.xnb">
+      <Link>Content\wolfman_jack_sprite_sheet.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

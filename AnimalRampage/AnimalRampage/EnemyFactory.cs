@@ -18,6 +18,7 @@ namespace AnimalRampage
 			int width = (int) ScreenManager.Instance.dimensions.X;
 			Random random = new Random();
 			enemy.LoadContent (content, inputManager, new Vector2(random.Next(width),0));
+			enemy.randomize ();
 			return enemy;
 		}
 	}

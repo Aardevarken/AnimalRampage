@@ -28,5 +28,13 @@ namespace AnimalRampage
 		{
 			base.Draw (spriteBatch);
 		}
+
+		public void randomize () {
+			Random random = new Random();
+			terminalVelocity = (float) (random.NextDouble ()*5.0 + 5.0);
+			jumpSpeed = (float) (random.NextDouble ()*-25.0 - 5.0);
+			fallSpeed = (float)(random.NextDouble ()*0.1 + 0.5);
+			velocity = new Vector2 ((float) (random.NextDouble()*4.0 - 2.0), velocity.Y);
+		}
 	}
 }

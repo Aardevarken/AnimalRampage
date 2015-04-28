@@ -16,7 +16,9 @@ namespace AnimalRampage
 			animation = new LoopingAnimation ();
 			image = content.Load<Texture2D> ("turtle");
 			animation.LoadContent (content, image, new Vector2(8, 2), new Vector2(0, 1), 8);
-			animation.Scale = 0.5f;
+			float scale = 0.5f;
+			animation.Scale = scale;
+			box = new Rectangle ((int)position.X, (int)position.Y, (int)(animation.FrameWidth * scale), (int)(animation.FrameHeight * scale));
 		}
 
 		public override void UnloadContent ()
@@ -29,6 +31,9 @@ namespace AnimalRampage
 		{
 			base.Update (gameTime, input);
 			animation.Update (gameTime);
+			if (isOnGround ()) {
+				Jump ();
+			}
 		}
 
 		public override void Draw (SpriteBatch spriteBatch)

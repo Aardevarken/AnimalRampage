@@ -9,13 +9,14 @@ namespace AnimalRampage
 {
 	public class Entity
 	{
-		const int invisibleFloor = 600;
+		protected int invisibleFloor = (int)ScreenManager.Instance.dimensions.Y - 20;
 		protected int health;
 		protected SpriteSheetAnimation moveAnimation;
 		protected float terminalVelocity, jumpSpeed, fallSpeed, horizontalSpeed;
-		protected Vector2 position;
+		public Vector2 position;
 		protected Texture2D image;
 		protected Vector2 velocity;
+		protected Rectangle box;
 
 		protected ContentManager content;
 
@@ -44,11 +45,13 @@ namespace AnimalRampage
 				if (velocity.Y < terminalVelocity)
 					velocity.Y += fallSpeed;
 			}
+			box = new Rectangle ((int)position.X, (int)position.Y, box.Width, box.Height);
 		}
 
 		public virtual void Update(GameTime gameTime, InputManager input)
 		{
 			Update (gameTime);
+
 		}
 
 		public virtual void Draw(SpriteBatch spriteBatch)
@@ -56,8 +59,9 @@ namespace AnimalRampage
 		}
 
 		protected bool isOnGround() {
+			box = new Rectangle ((int)position.X, (int)position.Y, box.Width, box.Height);
 			// TODO: add implementation with proper collision detection here
-			if (position.Y + image.Height / 2 <= invisibleFloor) // just checks if above invisible floor for now
+			if (box.Bottom <= invisibleFloor) // just checks if above invisible floor for now
 				return false;
 			else
 				return true;
@@ -68,6 +72,10 @@ namespace AnimalRampage
 			if (isOnGround()) {
 				velocity.Y = jumpSpeed;
 			}
+		}
+
+		public Rectangle getBox() {
+			return box;
 		}
 	}
 }
