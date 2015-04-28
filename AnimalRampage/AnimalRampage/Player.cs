@@ -65,12 +65,12 @@ namespace AnimalRampage
 					velocity.X *= 1.5f;
 				}
 
-				if (input.KeyDown (Keys.X)) {
+				if (input.KeyDown (Keys.Space)) {
 					throwing = true;
 					throwAnimation.Start ();
 				}
 
-				if (input.KeyDown (Keys.Space)) {
+				if (input.KeyDown (Keys.Up)) {
 					this.Jump ();
 				}
 			} else if (isOnGround()) {

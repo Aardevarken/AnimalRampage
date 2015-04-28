@@ -55,6 +55,7 @@ namespace AnimalRampage
 
 		public override void Kill() {
 			base.Kill ();
+			death.flippedHorizontally = moveAnimation.flippedHorizontally;
 			death.Start ();
 			jumpSpeed = 0;
 			fallSpeed = 0;
