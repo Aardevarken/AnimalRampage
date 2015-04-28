@@ -31,6 +31,8 @@ namespace AnimalRampage
 			throwAnimation = new FiniteAnimation ();
 			throwAnimation.LoadContent (content, image, new Vector2(8, 5), new Vector2(0, 1), 4);
 			throwAnimation.subscribe (this);
+
+			box = new Rectangle ((int)position.X, (int)position.Y, walkAnimation.FrameWidth, walkAnimation.FrameHeight);
 		}
 
 		public override void UnloadContent ()
@@ -93,4 +95,3 @@ namespace AnimalRampage
 		#endregion
 	}
 }
-
