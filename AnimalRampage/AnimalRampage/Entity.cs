@@ -17,6 +17,7 @@ namespace AnimalRampage
 		protected Texture2D image;
 		protected Vector2 velocity;
 		protected Rectangle box;
+		public bool dying = false;
 		public bool dead = false;
 
 		protected ContentManager content;
@@ -39,7 +40,7 @@ namespace AnimalRampage
 		}
 
 		public virtual void Kill() {
-			dead = true;
+			dying = true;
 			CollisionDetector.getInstance ().Detach (this);
 		}
 

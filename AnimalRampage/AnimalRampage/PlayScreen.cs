@@ -11,7 +11,7 @@ namespace AnimalRampage
 	{
 		private Player player;
 		private List<Enemy> enemies;
-		private int turtleGenRefresh = 20;
+		private int turtleGenRefresh = 10;
 		SpriteSheetAnimation moveAnimation;
 		SpriteSheetAnimation stereo1Animation;
 		SpriteSheetAnimation stereo2Animation;
@@ -78,16 +78,16 @@ namespace AnimalRampage
 			stereo1Animation.Update (gameTime);
 			stereo2Animation.Update (gameTime);
 			player.Update (gameTime, inputManager);
-			if (enemies.Count < 50 && turtleGenRefresh < 1) {
+			if (enemies.Count < 200 && turtleGenRefresh < 1) {
 				Random random = new Random();
 				string type;
-				if (random.NextDouble () < 0.4) {
+				if (random.NextDouble () < 0.2) {
 					type = "wiggle";
 				} else {
 					type = "spin";
 				}
 				enemies.Add (EnemyFactory.getInstance (type, content, inputManager));
-				turtleGenRefresh = 20;
+				turtleGenRefresh = 10;
 			}
 			foreach (Enemy enemy in enemies) {
 				enemy.Update (gameTime, inputManager);
