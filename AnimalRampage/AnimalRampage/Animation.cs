@@ -74,11 +74,11 @@ namespace AnimalRampage {
 			if (draw) {
 				if (image != null) {
 					origin = new Vector2 (sourceRect.Width / 2, sourceRect.Height / 2);
-					spriteBatch.Draw (image, position + origin, sourceRect, Color.White * alpha, rotation, origin, scale, effect, 0.0f);
+					spriteBatch.Draw (image, position+origin, sourceRect, Color.White * alpha, rotation, origin, scale, effect, 0.0f);
 				}
 				if (text != String.Empty) {
 					origin = new Vector2 (font.MeasureString (text).X / 2, font.MeasureString (text).Y / 2);
-					spriteBatch.DrawString (font, text, position + origin, color * alpha, rotation, origin, scale, effect, 0.0f);
+					spriteBatch.DrawString (font, text, position, color * alpha, rotation, origin, scale, effect, 0.0f);
 				}
 			}
 		}

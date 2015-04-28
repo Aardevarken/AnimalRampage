@@ -16,6 +16,7 @@ namespace AnimalRampage
 		public Vector2 position;
 		protected Texture2D image;
 		protected Vector2 velocity;
+		protected Rectangle box;
 
 		protected ContentManager content;
 
@@ -44,6 +45,7 @@ namespace AnimalRampage
 				if (velocity.Y < terminalVelocity)
 					velocity.Y += fallSpeed;
 			}
+			box = new Rectangle ((int)position.X, (int)position.Y, box.Width, box.Height);
 		}
 
 		public virtual void Update(GameTime gameTime, InputManager input)
@@ -68,6 +70,10 @@ namespace AnimalRampage
 			if (isOnGround()) {
 				velocity.Y = jumpSpeed;
 			}
+		}
+
+		public Rectangle getBox() {
+			return box;
 		}
 	}
 }

@@ -86,6 +86,7 @@ namespace AnimalRampage
 			stereo1Animation.Draw (spriteBatch, positionStereo1);
 			stereo2Animation.Draw (spriteBatch, positionSteroe2);
 
+
 			base.Draw (spriteBatch);
 			player.Draw (spriteBatch);
 			foreach (Enemy enemy in enemies) {
