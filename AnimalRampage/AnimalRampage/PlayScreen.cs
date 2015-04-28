@@ -11,6 +11,8 @@ namespace AnimalRampage
 	{
 		private Player player;
 		private List<Enemy> enemies;
+		SpriteSheetAnimation moveAnimation;
+		Vector2 position;
 
 		public override void LoadContent(ContentManager Content, InputManager inputManager)
 		{
@@ -18,10 +20,18 @@ namespace AnimalRampage
 			player = new Player ();
 			player.LoadContent (content, inputManager);
 			enemies = new List<Enemy> ();
+			moveAnimation = new LoopingAnimation ();
+
+			Texture2D image = content.Load<Texture2D> ("stereo_sprite_sheet");
+
+			position = new Vector2 (ScreenManager.Instance.dimensions.X/2, 100);
+			moveAnimation.LoadContent (content, image, new Vector2(5, 1), new Vector2(0, 0), 4);
+			moveAnimation.Scale = 0.5f;
 		}
 
 		public override void UnloadContent()
 		{
+			moveAnimation.UnloadContent ();
 			base.UnloadContent ();
 			player.UnloadContent ();
 			foreach (Enemy enemy in enemies) {
@@ -32,6 +42,7 @@ namespace AnimalRampage
 		public override void Update(GameTime gameTime)
 		{
 			inputManager.Update ();
+			moveAnimation.Update (gameTime);
 			player.Update (gameTime, inputManager);
 			if (enemies.Count < 50) {
 				enemies.Add (EnemyFactory.getInstance ("spin", content, inputManager));
@@ -48,6 +59,7 @@ namespace AnimalRampage
 
 		public override void Draw(SpriteBatch spriteBatch)
 		{
+			moveAnimation.Draw(spriteBatch,position);
 			base.Draw (spriteBatch);
 			player.Draw (spriteBatch);
 			foreach (Enemy enemy in enemies) {
