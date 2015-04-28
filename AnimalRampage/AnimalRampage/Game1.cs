@@ -17,6 +17,12 @@ namespace AnimalRampage
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
+		float R = .5f;
+		float G = .2f;
+		float B = .9f;
+		float ramount = .005f;
+		float gamount = -.008f;
+		float bamount = -.009f;
 
 		public Game1 ()
 		{
@@ -89,7 +95,19 @@ namespace AnimalRampage
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Draw (GameTime gameTime)
 		{
-			graphics.GraphicsDevice.Clear (Color.CornflowerBlue);
+
+			//graphics.GraphicsDevice.Clear (Color.CornflowerBlue);
+			if (R >= 1 || R <= 0)
+				ramount = -ramount;
+			if (G >= 1 || G <= 0)
+				gamount = -gamount;
+			if (B >= 1 || B<= 0)
+				bamount = -bamount;
+			R += ramount;
+			G += gamount;
+			B += bamount;
+
+			graphics.GraphicsDevice.Clear (new Color (R, G, B));
 		
 			//TODO: Add your drawing code here
 			spriteBatch.Begin ();
