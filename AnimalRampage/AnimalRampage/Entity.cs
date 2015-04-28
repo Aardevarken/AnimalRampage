@@ -51,6 +51,7 @@ namespace AnimalRampage
 		public virtual void Update(GameTime gameTime, InputManager input)
 		{
 			Update (gameTime);
+
 		}
 
 		public virtual void Draw(SpriteBatch spriteBatch)
@@ -58,8 +59,9 @@ namespace AnimalRampage
 		}
 
 		protected bool isOnGround() {
+			box = new Rectangle ((int)position.X, (int)position.Y, box.Width, box.Height);
 			// TODO: add implementation with proper collision detection here
-			if (position.Y + image.Height / 2 <= invisibleFloor) // just checks if above invisible floor for now
+			if (box.Bottom <= invisibleFloor) // just checks if above invisible floor for now
 				return false;
 			else
 				return true;

@@ -27,6 +27,7 @@ namespace AnimalRampage
 			position = new Vector2 (0, 100);
 			moveAnimation.LoadContent (content, image, new Vector2(8, 5), new Vector2(0, 0), 7);
 			moveAnimation.Scale = 1.0f;
+			box = new Rectangle ((int)position.X, (int)position.Y, moveAnimation.FrameWidth, moveAnimation.FrameHeight);
 		}
 
 

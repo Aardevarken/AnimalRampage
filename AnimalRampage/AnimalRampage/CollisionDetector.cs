@@ -9,10 +9,23 @@ namespace AnimalRampage
 {
 	public class CollisionDetector
 	{
-		public CollisionDetector ()
+		List<Entity> entities;
+		CollisionDetector instance;
+		private CollisionDetector ()
 		{
-
+			entities = new List<Entity> ();
 		}
+
+		public static CollisionDetector getInstance(){
+			if (instance == null) {
+				instance = new CollisionDetector();
+			} else {
+				return instance;
+			}
+		}
+
+		public void Update(){
+
 	}
 }
 
