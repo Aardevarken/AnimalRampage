@@ -26,7 +26,7 @@ namespace AnimalRampage
 			Debug.WriteLine (image.Bounds.Size.X);
 			position = new Vector2 (0, 100);
 			moveAnimation.LoadContent (content, image, new Vector2(8, 5), new Vector2(0, 0), 7);
-			moveAnimation.Scale = 0.5f;
+			moveAnimation.Scale = 1.0f;
 		}
 
 
@@ -43,9 +43,11 @@ namespace AnimalRampage
 			if (input.KeyDown (Keys.Right, Keys.D)) {
 				velocity.X = horizontalSpeed;
 				moveAnimation.isPaused = false;
+				moveAnimation.flippedHorizontally = false;
 			} else if (input.KeyDown (Keys.Left, Keys.A)) {
 				velocity.X = -horizontalSpeed;
 				moveAnimation.isPaused = false;
+				moveAnimation.flippedHorizontally = true;
 			} else {
 				velocity.X = 0;
 				moveAnimation.isPaused = true;
