@@ -29,6 +29,9 @@ namespace AnimalRampage
 		{
 			base.Update (gameTime, input);
 			animation.Update (gameTime);
+			if (isOnGround ()) {
+				Jump ();
+			}
 		}
 
 		public override void Draw (SpriteBatch spriteBatch)

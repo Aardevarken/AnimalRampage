@@ -17,6 +17,7 @@ namespace AnimalRampage
 			base.LoadContent (Content, inputManager);
 			player = new Player ();
 			player.LoadContent (content, inputManager);
+			enemies = new List<Enemy> ();
 		}
 
 		public override void UnloadContent()
@@ -24,23 +25,29 @@ namespace AnimalRampage
 			base.UnloadContent ();
 			player.UnloadContent ();
 			foreach (Enemy enemy in enemies) {
-				
+				enemy.UnloadContent ();
 			}
-				//.UnloadContent ();
 		}
 
 		public override void Update(GameTime gameTime)
 		{
 			inputManager.Update ();
 			player.Update (gameTime, inputManager);
-			//test.Update (gameTime, inputManager);
+			if (enemies.Count < 50) {
+				enemies.Add (EnemyFactory.getInstance ("spin", content, inputManager));
+			}
+			foreach (Enemy enemy in enemies) {
+				enemy.Update (gameTime, inputManager);
+			}
 		}
 
 		public override void Draw(SpriteBatch spriteBatch)
 		{
 			base.Draw (spriteBatch);
 			player.Draw (spriteBatch);
-			//test.Draw (spriteBatch);
+			foreach (Enemy enemy in enemies) {
+				enemy.Draw (spriteBatch);
+			}
 		}
 
 
