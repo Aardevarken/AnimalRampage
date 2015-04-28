@@ -8,9 +8,10 @@ namespace AnimalRampage
 {
 	public class Enemy : Entity
 	{
-		public override void LoadContent (ContentManager content, InputManager inputManager)
+		public virtual void LoadContent (ContentManager content, InputManager inputManager, Vector2 position)
 		{
 			base.LoadContent (content, inputManager);
+			this.position = position;
 		}
 
 		public override void UnloadContent ()

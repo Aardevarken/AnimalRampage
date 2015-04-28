@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace AnimalRampage
 {
@@ -21,9 +22,10 @@ namespace AnimalRampage
 			base.LoadContent (content, inputManager);
 			moveAnimation = new LoopingAnimation ();
 			input = inputManager;
-			image = content.Load<Texture2D> ("mc_upperbody");
+			image = content.Load<Texture2D> ("bear_man_sprite_sheet");
+			Debug.WriteLine (image.Bounds.Size.X);
 			position = new Vector2 (0, 100);
-			moveAnimation.LoadContent (content, image, new Vector2(8, 3), new Vector2(0, 0), 8);
+			moveAnimation.LoadContent (content, image, new Vector2(8, 5), new Vector2(0, 0), 7);
 			moveAnimation.Scale = 0.5f;
 		}
 
