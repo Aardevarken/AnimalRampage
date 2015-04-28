@@ -8,33 +8,36 @@ using System.Diagnostics;
 
 namespace AnimalRampage
 {
-	public class Player : Entity
+	public class Player : Entity, FiniteAnimationSubscriber
 	{
-		private Weapon holding;
 		private List<Weapon> backpack;
 		InputManager input;
+		private LoopingAnimation walkAnimation;
+		private FiniteAnimation throwAnimation;
+		private Boolean throwing;
 
 		public override void LoadContent (ContentManager content, InputManager inputManager)
 		{
-			holding = new Turtle ();
-			holding.LoadContent (content);
+			input = inputManager;
+			position = new Vector2 (0, 100);
+			throwing = false;
+
 			backpack = new List<Weapon> ();
 			base.LoadContent (content, inputManager);
-			moveAnimation = new LoopingAnimation ();
-			input = inputManager;
+
 			image = content.Load<Texture2D> ("bear_man_sprite_sheet");
-			Debug.WriteLine (image.Bounds.Size.X);
-			position = new Vector2 (0, 100);
-			moveAnimation.LoadContent (content, image, new Vector2(8, 5), new Vector2(0, 0), 7);
-			moveAnimation.Scale = 1.0f;
+			walkAnimation = new LoopingAnimation ();
+			walkAnimation.LoadContent (content, image, new Vector2(8, 5), new Vector2(0, 0), 7);
+			throwAnimation = new FiniteAnimation ();
+			throwAnimation.LoadContent (content, image, new Vector2(8, 5), new Vector2(0, 1), 4);
+			throwAnimation.subscribe (this);
 		}
-
-
 
 		public override void UnloadContent ()
 		{
 			base.UnloadContent ();
-			moveAnimation.UnloadContent ();
+			walkAnimation.UnloadContent ();
+			throwAnimation.UnloadContent ();
 		}
 
 		public override void Update (GameTime gameTime, InputManager input)
@@ -42,34 +45,52 @@ namespace AnimalRampage
 			base.Update (gameTime, input);
 			if (input.KeyDown (Keys.Right, Keys.D)) {
 				velocity.X = horizontalSpeed;
-				moveAnimation.isPaused = false;
-				moveAnimation.flippedHorizontally = false;
+				walkAnimation.isPaused = false;
+				walkAnimation.flippedHorizontally = false;
+				throwAnimation.flippedHorizontally = false;
 			} else if (input.KeyDown (Keys.Left, Keys.A)) {
 				velocity.X = -horizontalSpeed;
-				moveAnimation.isPaused = false;
-				moveAnimation.flippedHorizontally = true;
+				walkAnimation.isPaused = false;
+				walkAnimation.flippedHorizontally = true;
+				throwAnimation.flippedHorizontally = true;
 			} else {
 				velocity.X = 0;
-				moveAnimation.isPaused = true;
+				walkAnimation.isPaused = true;
 			}
 			//running
-			if (input.KeyDown (Keys.LeftShift))
+			if (input.KeyDown (Keys.LeftShift)) {
 				velocity.X *= 1.5f;
+			}
 
 			if (input.KeyDown (Keys.X)) {
-				holding.Throw ();
+				throwing = true;
+				throwAnimation.Start ();
 			}
-			if (input.KeyDown (Keys.Space))
+
+			if (input.KeyDown (Keys.Space)) {
 				this.Jump ();
-			holding.Update (gameTime);
-			moveAnimation.Update (gameTime);
+			}
+
+			walkAnimation.Update (gameTime);
+			throwAnimation.Update (gameTime);
 		}
 
 		public override void Draw (SpriteBatch spriteBatch)
 		{
-			moveAnimation.Draw (spriteBatch, position);
-			holding.Draw (spriteBatch, position);
+			if (throwing) {
+				throwAnimation.Draw (spriteBatch, position);
+			} else {
+				walkAnimation.Draw (spriteBatch, position);
+			}
 		}
+
+		#region FiniteAnimationSubscriber implementation
+
+		public void animationFinished () {
+			throwing = false;
+		}
+
+		#endregion
 	}
 }
 
