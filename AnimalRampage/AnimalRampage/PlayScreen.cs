@@ -91,7 +91,7 @@ namespace AnimalRampage
 			}
 			foreach (Enemy enemy in enemies) {
 				enemy.Update (gameTime, inputManager);
-				if (enemy.getBox().Right < 0 || enemy.position.X > ScreenManager.Instance.dimensions.X) {
+				if (enemy.getBox().Right < 0 || enemy.position.X > ScreenManager.Instance.dimensions.X || enemy.dead) {
 					enemies.Remove (enemy);
 					enemy.UnloadContent ();
 					break;

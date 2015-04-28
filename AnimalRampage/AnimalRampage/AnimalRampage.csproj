@@ -68,6 +68,7 @@
     <Compile Include="EnemyFactory.cs" />
     <Compile Include="SpinningTurtle.cs" />
     <Compile Include="WigglingTurtle.cs" />
+    <Compile Include="CollisionDetector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon.png" />

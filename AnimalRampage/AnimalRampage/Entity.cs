@@ -17,6 +17,7 @@ namespace AnimalRampage
 		protected Texture2D image;
 		protected Vector2 velocity;
 		protected Rectangle box;
+		public bool dead = false;
 
 		protected ContentManager content;
 
@@ -28,11 +29,18 @@ namespace AnimalRampage
 			jumpSpeed = -15;
 			fallSpeed = 0.5f;
 			horizontalSpeed = 5;
+			dead = false;
+			CollisionDetector.getInstance ().Attach (this);
 		}
 
 		public virtual void UnloadContent()
 		{
 			content.Unload ();
+		}
+
+		public virtual void Kill() {
+			dead = true;
+			CollisionDetector.getInstance ().Detach (this);
 		}
 
 		public virtual void Update(GameTime gameTime)
@@ -51,7 +59,7 @@ namespace AnimalRampage
 		public virtual void Update(GameTime gameTime, InputManager input)
 		{
 			Update (gameTime);
-
+			CollisionDetector.getInstance ().Update();
 		}
 
 		public virtual void Draw(SpriteBatch spriteBatch)
@@ -77,6 +85,10 @@ namespace AnimalRampage
 		public Rectangle getBox() {
 			return box;
 		}
+
+		public virtual void Collide (Entity entity) {
+		}
+
 	}
 }
 
