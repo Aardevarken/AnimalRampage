@@ -65,8 +65,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FiniteAnimationSubscriber.cs" />
     <Compile Include="FiniteAnimation.cs" />
-    <Compile Include="EnemyTurtle.cs" />
     <Compile Include="EnemyFactory.cs" />
+    <Compile Include="SpinningTurtle.cs" />
+    <Compile Include="WigglingTurtle.cs" />
     <Compile Include="CollisionDetector.cs" />
   </ItemGroup>
   <ItemGroup>

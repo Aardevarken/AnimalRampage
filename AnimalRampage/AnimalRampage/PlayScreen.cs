@@ -79,7 +79,14 @@ namespace AnimalRampage
 			stereo2Animation.Update (gameTime);
 			player.Update (gameTime, inputManager);
 			if (enemies.Count < 50 && turtleGenRefresh < 1) {
-				enemies.Add (EnemyFactory.getInstance ("spin", content, inputManager));
+				Random random = new Random();
+				string type;
+				if (random.NextDouble () < 0.4) {
+					type = "wiggle";
+				} else {
+					type = "spin";
+				}
+				enemies.Add (EnemyFactory.getInstance (type, content, inputManager));
 				turtleGenRefresh = 20;
 			}
 			foreach (Enemy enemy in enemies) {
