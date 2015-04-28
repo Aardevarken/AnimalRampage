@@ -45,34 +45,37 @@ namespace AnimalRampage
 		public override void Update (GameTime gameTime, InputManager input)
 		{
 			base.Update (gameTime, input);
-			if (input.KeyDown (Keys.Right, Keys.D)) {
-				velocity.X = horizontalSpeed;
-				walkAnimation.isPaused = false;
-				walkAnimation.flippedHorizontally = false;
-				throwAnimation.flippedHorizontally = false;
-			} else if (input.KeyDown (Keys.Left, Keys.A)) {
-				velocity.X = -horizontalSpeed;
-				walkAnimation.isPaused = false;
-				walkAnimation.flippedHorizontally = true;
-				throwAnimation.flippedHorizontally = true;
-			} else {
+			if (!throwing) {
+				if (input.KeyDown (Keys.Right, Keys.D)) {
+					velocity.X = horizontalSpeed;
+					walkAnimation.isPaused = false;
+					walkAnimation.flippedHorizontally = false;
+					throwAnimation.flippedHorizontally = false;
+				} else if (input.KeyDown (Keys.Left, Keys.A)) {
+					velocity.X = -horizontalSpeed;
+					walkAnimation.isPaused = false;
+					walkAnimation.flippedHorizontally = true;
+					throwAnimation.flippedHorizontally = true;
+				} else {
+					velocity.X = 0;
+					walkAnimation.isPaused = true;
+				}
+				//running
+				if (input.KeyDown (Keys.LeftShift)) {
+					velocity.X *= 1.5f;
+				}
+
+				if (input.KeyDown (Keys.X)) {
+					throwing = true;
+					throwAnimation.Start ();
+				}
+
+				if (input.KeyDown (Keys.Space)) {
+					this.Jump ();
+				}
+			} else if (isOnGround()) {
 				velocity.X = 0;
-				walkAnimation.isPaused = true;
 			}
-			//running
-			if (input.KeyDown (Keys.LeftShift)) {
-				velocity.X *= 1.5f;
-			}
-
-			if (input.KeyDown (Keys.X)) {
-				throwing = true;
-				throwAnimation.Start ();
-			}
-
-			if (input.KeyDown (Keys.Space)) {
-				this.Jump ();
-			}
-
 			walkAnimation.Update (gameTime);
 			throwAnimation.Update (gameTime);
 		}
@@ -83,6 +86,15 @@ namespace AnimalRampage
 				throwAnimation.Draw (spriteBatch, position);
 			} else {
 				walkAnimation.Draw (spriteBatch, position);
+			}
+		}
+
+		public override void Collide (Entity entity)
+		{
+			if (entity is Enemy) {
+				if (throwing) {
+					entity.Kill ();
+				}
 			}
 		}
 

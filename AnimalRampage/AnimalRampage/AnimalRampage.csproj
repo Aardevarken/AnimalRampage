@@ -67,6 +67,7 @@
     <Compile Include="FiniteAnimation.cs" />
     <Compile Include="EnemyTurtle.cs" />
     <Compile Include="EnemyFactory.cs" />
+    <Compile Include="CollisionDetector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon.png" />
