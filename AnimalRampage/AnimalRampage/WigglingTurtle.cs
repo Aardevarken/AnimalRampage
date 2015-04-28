@@ -6,16 +6,14 @@ using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 namespace AnimalRampage
 {
-	public class EnemyTurtle : Enemy
+	public class WigglingTurtle : Enemy
 	{
-		private LoopingAnimation animation;
-
 		public override void LoadContent (ContentManager content, InputManager inputManager, Vector2 position)
 		{
 			base.LoadContent (content, inputManager, position);
 			animation = new LoopingAnimation ();
 			image = content.Load<Texture2D> ("turtle");
-			animation.LoadContent (content, image, new Vector2(8, 2), new Vector2(0, 1), 8);
+			animation.LoadContent (content, image, new Vector2(8, 2), new Vector2(0, 0), 1);
 			float scale = 0.5f;
 			animation.Scale = scale;
 			box = new Rectangle ((int)position.X, (int)position.Y, (int)(animation.FrameWidth * scale), (int)(animation.FrameHeight * scale));
@@ -42,4 +40,3 @@ namespace AnimalRampage
 		}
 	}
 }
-

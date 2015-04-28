@@ -11,9 +11,9 @@ namespace AnimalRampage
 		public static Enemy getInstance(string type, ContentManager content, InputManager inputManager) {
 			Enemy enemy;
 			if (type.Equals ("spin")) {
-				enemy = new EnemyTurtle ();
+				enemy = new SpinningTurtle ();
 			} else { // "wiggle"
-				enemy = new EnemyTurtle ();
+				enemy = new WigglingTurtle ();
 			}
 			int width = (int) ScreenManager.Instance.dimensions.X;
 			Random random = new Random();

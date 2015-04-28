@@ -8,6 +8,8 @@ namespace AnimalRampage
 {
 	public class Enemy : Entity
 	{
+		protected LoopingAnimation animation;
+
 		public virtual void LoadContent (ContentManager content, InputManager inputManager, Vector2 position)
 		{
 			base.LoadContent (content, inputManager);
@@ -35,6 +37,9 @@ namespace AnimalRampage
 			jumpSpeed = (float) (random.NextDouble ()*-25.0 - 5.0);
 			fallSpeed = (float)(random.NextDouble ()*0.1 + 0.5);
 			velocity = new Vector2 ((float) (random.NextDouble()*4.0 - 2.0), velocity.Y);
+			if (velocity.X < 0) {
+				animation.flippedHorizontally = true;
+			}
 		}
 	}
 }
