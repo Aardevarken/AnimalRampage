@@ -53,7 +53,7 @@ namespace AnimalRampage
 			inputManager = new InputManager ();
 			currentScreen.LoadContent (Content, inputManager);
 
-			fadeTexture = content.Load<Texture2D> ("fade");
+			fadeTexture = content.Load<Texture2D> ("Fade");
 			fade.LoadContent (content, fadeTexture, "", Vector2.Zero);
 			fade.Scale = dimensions.X;
 		}
