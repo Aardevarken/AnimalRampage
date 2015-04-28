@@ -104,10 +104,10 @@ namespace AnimalRampage
 
 
 			base.Draw (spriteBatch);
-			player.Draw (spriteBatch);
 			foreach (Enemy enemy in enemies) {
 				enemy.Draw (spriteBatch);
 			}
+			player.Draw (spriteBatch);
 		}
 
 
