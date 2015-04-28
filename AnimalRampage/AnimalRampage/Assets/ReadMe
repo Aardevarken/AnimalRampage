@@ -1,17 +1,25 @@
-Main Character Upper Body
-    Walking:    frame 1 - 8
-    Attack:     frame 9 - 13
-    Hurt:       frame 14
-
-Main Character Lower Body
-    Walking:    frame 1 - 8
-    Crouch:     frame 9
-    Jumping:    frame 10 - 14
-    Hurt:       frame 15
-
 Turtl Throw
     Throw:      All Frames
 
 Turtle Move
     Spin:       frame 1 - 8
     Walking:    frame 9 - 10
+
+Bear Man
+    x - 866
+    y - 560
+    walking: 8 frames
+    attacking_up: 5 frames
+    attacking_down: 5 frames
+    jump: 6
+    hurt: 3
+
+wolfman jack
+    x - 543
+    y - 505
+    5 frames
+
+stereo:
+    x - 849
+    y - 673
+    5 frames
