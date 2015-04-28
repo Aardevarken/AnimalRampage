@@ -47,7 +47,7 @@ namespace AnimalRampage
 					frameCounter = 0;
 					currentFrame = new Vector2 (currentFrame.X + 1, currentFrame.Y);
 
-					if (currentFrame.X * FrameWidth >= image.Width) {
+					if ((currentFrame.X * FrameWidth >= image.Width) || currentFrame.X > length) {
 						currentFrame = new Vector2 (start, currentFrame.Y);
 					}
 				}

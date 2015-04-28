@@ -8,9 +8,10 @@ namespace AnimalRampage
 {
 	public class Enemy : Entity
 	{
-		public override void LoadContent (ContentManager content, InputManager inputManager)
+		public virtual void LoadContent (ContentManager content, InputManager inputManager, Vector2 position)
 		{
 			base.LoadContent (content, inputManager);
+			this.position = position;
 		}
 
 		public override void UnloadContent ()
@@ -26,6 +27,14 @@ namespace AnimalRampage
 		public override void Draw (SpriteBatch spriteBatch)
 		{
 			base.Draw (spriteBatch);
+		}
+
+		public void randomize () {
+			Random random = new Random();
+			terminalVelocity = (float) (random.NextDouble ()*5.0 + 5.0);
+			jumpSpeed = (float) (random.NextDouble ()*-25.0 - 5.0);
+			fallSpeed = (float)(random.NextDouble ()*0.1 + 0.5);
+			velocity = new Vector2 ((float) (random.NextDouble()*4.0 - 2.0), velocity.Y);
 		}
 	}
 }
