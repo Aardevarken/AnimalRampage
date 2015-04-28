@@ -13,7 +13,7 @@ using Android.App;
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("aardevarken")]
+[assembly: AssemblyCopyright ("LuminousStudios")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 

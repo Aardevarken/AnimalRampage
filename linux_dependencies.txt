@@ -1,0 +1,2 @@
+on ubuntu:
+sudo apt-get install libsdl2-dev libsdl2-mixer-2.0-0 libopenal-dev libsdl-mixer1.2

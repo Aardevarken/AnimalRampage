@@ -1,6 +1,15 @@
 ﻿<Properties StartupItem="AnimalRampage/AnimalRampage.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AnimalRampage/Turtle.cs">
+    <Files>
+      <File FileName="AnimalRampage/ScreenManager.cs" Line="4" Column="4" />
+      <File FileName="AnimalRampage/PlayScreen.cs" Line="1" Column="1" />
+      <File FileName="AnimalRampage/GameScreen.cs" Line="1" Column="1" />
+      <File FileName="AnimalRampage/Game1.cs" Line="1" Column="1" />
+      <File FileName="AnimalRampage/Player.cs" Line="1" Column="1" />
+      <File FileName="AnimalRampage/Turtle.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
