@@ -9,7 +9,7 @@ namespace AnimalRampage
 {
 	public class Entity
 	{
-		const int invisibleFloor = 600;
+		protected int invisibleFloor = (int)ScreenManager.Instance.dimensions.Y - 20;
 		protected int health;
 		protected SpriteSheetAnimation moveAnimation;
 		protected float terminalVelocity, jumpSpeed, fallSpeed, horizontalSpeed;
