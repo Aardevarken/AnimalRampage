@@ -38,5 +38,11 @@ namespace AnimalRampage
 		{
 			animation.Draw (spriteBatch, position);
 		}
+
+		public override void randomize() {
+			base.randomize ();
+			jumpSpeed = 0;
+			velocity = new Vector2 ((float) (velocity.X*2.0+1.0), velocity.Y);
+		}
 	}
 }

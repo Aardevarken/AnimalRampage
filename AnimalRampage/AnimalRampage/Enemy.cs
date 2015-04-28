@@ -31,7 +31,7 @@ namespace AnimalRampage
 			base.Draw (spriteBatch);
 		}
 
-		public void randomize () {
+		public virtual void randomize () {
 			Random random = new Random();
 			terminalVelocity = (float) (random.NextDouble ()*5.0 + 5.0);
 			jumpSpeed = (float) (random.NextDouble ()*-25.0 - 5.0);
